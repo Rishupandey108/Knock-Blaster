@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Intel - Knock Blaster</title>
+    <style>
+        body {
+            margin: 0;
+            background: #020208;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .intel-container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(5, 5, 20, 0.95);
+            border: 1px solid #00f2ff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            letter-spacing: 5px;
+            color: #00f2ff;
+            text-shadow: 0 0 10px #00f2ff;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .step h2 {
+            font-size: 1.2rem;
+            color: #ff0055;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .step p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #bbb;
+        }
+
+        .instr-img {
+            width: 100%;
+            height: 200px;
+            background: #111;
+            border: 1px solid #333;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .instr-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .instr-img:hover img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .btn-start {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid #00f2ff;
+            color: #00f2ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-start:hover {
+            background: #00f2ff;
+            color: #000;
+            box-shadow: 0 0 20px #00f2ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intel-container">
+        <h1>MISSION INTEL</h1>
+
+        <div class="step">
+            <h2>01. AUDIO TRIGGER</h2>
+            <p>The system is synced to your microphone. To fire a heavy kinetic slug, make a sharp, loud sound like a <strong>clap</strong> or a <strong>knock</strong> on your desk.</p>
+            <div class="instr-img">
+                <img src="img3.png" alt="Visual of sound wave input hitting a threshold">
+            </div>
+            
+        </div>
+
+        <div class="step">
+            <h2>02. TARGETING</h2>
+            <p>Your blaster moves vertically automatically. Time your sound so the projectile intersects with the neon containers rising from the bottom.</p>
+            <div class="instr-img">
+                <img src="img1.png" alt="Screenshot of the blaster lining up with a target">
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>03. SYSTEM COOLDOWN</h2>
+            <p>One sound equals one fire. The blaster has a <strong>400ms cooldown</strong> to prevent accidental double-firing. Focus on precision, not noise.</p>
+            <div class="instr-img">
+                <img src="img3.png" alt="Visual representation of a weapon reload or cooldown bar">
+            </div>
+        </div>
+
+        <button class="btn-start" onclick="window.location.href='game.html'">INITIALIZE DEPLOYMENT</button>
+    </div>
+
+</body>
+</html>
