@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Knock Blaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="ui">
+    <div class="lvl-indicator" id="lvl-display">SELECT MISSION</div>
+    <div class="stat">SCORE: <span id="score">0</span></div>
+    <div class="stat" id="shield-ui">CHANCES: <span id="lives">--</span></div>
+    <div id="knock-indicator"><div id="knock-flash"></div></div>
+</div>
+
+<div id="level-up-msg">LEVEL UP!</div>
+
+<div id="start-screen" class="overlay">
+    <h1>KNOCK BLASTER</h1>
+    <div class="instruction-box">
+        <h3><a href="instuction.html">SYSTEM INSTRUCTIONS</a></h3>
+        <ul class="instr-list">
+            <li><strong>TRIGGER:</strong> Make a loud sound (Knock/Clap) to fire.</li>
+            <li><strong>RELOAD:</strong> Built-in 0.4s cooldown per shot.</li>
+            <li><strong>MISSION:</strong> Destroy neon containers before they exit the top.</li>
+            <li><strong>LEVELS:</strong> Reach the point goal to advance sub-levels.</li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn" onclick="showSubLevels('EASY')">EASY MISSION</button>
+        <button class="btn" onclick="showSubLevels('MEDIUM')">MEDIUM MISSION</button>
+        <button class="btn" onclick="showSubLevels('HARD')">HARD MISSION</button>
+    </div>
+</div>
+
+<div id="sub-level-screen" class="overlay" style="display:none;">
+    <h1 id="selected-main-title">MISSION</h1>
+    <p style="color: #666;">SELECT DEPLOYMENT SECTOR</p>
+    <div class="btn-group" id="sub-btn-container"></div>
+    <div class="back-btn" onclick="goBack()">← BACK TO COMMAND</div>
+</div>
+
+<div id="end-screen" class="overlay" style="display:none;">
+    <h1 id="end-title">MISSION OVER</h1>
+    <div style="font-size: 1.2rem; margin-top: 15px;">FINAL SCORE</div>
+    <span style="font-size: 4rem; color: #00f2ff;" id="final-score">0</span>
+    <button class="btn" style="display:block; margin: 20px auto; width: 100%;" onclick="location.reload()">REBOOT SYSTEM</button>
+</div>
+
+<canvas id="gameCanvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
