@@ -47,4 +47,18 @@ h1 { font-size: 2.5rem; margin: 0; color: #fff; text-shadow: 0 0 20px #00f2ff; l
     position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
     font-size: 4rem; color: #00ff88; text-shadow: 0 0 30px #00ff88;
     display: none; pointer-events: none; z-index: 20;
+
+}
+
+.footer-copyright {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: rgba(0, 242, 255, 0.5); /* Semi-transparent neon blue */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    pointer-events: none; /* Keeps it from interfering with clicks */
+    z-index: 100;
 }
